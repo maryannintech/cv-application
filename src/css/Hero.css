@@ -1,0 +1,29 @@
+.title {
+  text-align: center;
+  height: 75vh;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+    margin: 0;
+}
+
+.title > h1,
+h2 {
+  margin: 0;
+}
+
+.title > h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.title > h2 {
+  color: grey;
+  font-size: 30px;
+  font-weight: 300;
+}
