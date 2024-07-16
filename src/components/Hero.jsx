@@ -1,5 +1,5 @@
-import '../css/Hero.css';
-import '../css/Fonts.css';
+import "../css/Hero.css";
+import "../css/Fonts.css";
 
 export default function Hero() {
   return (

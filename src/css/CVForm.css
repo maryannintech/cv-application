@@ -1,0 +1,29 @@
+.form {
+  padding: 10px 30px;
+}
+
+.general-info > p {
+  margin: 0;
+}
+
+.general-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.general-desc {
+  color: grey;
+}
+
+label {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  padding: 10px;
+}
