@@ -1,10 +1,14 @@
 import "../css/Fonts.css";
 import "../css/Nav.css";
+import "../css/CVForm.css";
 import CVPreview from "./CVPreview";
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+
 
 export default function Nav() {
+    function showCVForm() {
+
+    }
     function redirectToGithubTab(url) {
         window.open(url, '_blank')
     }
@@ -12,7 +16,7 @@ export default function Nav() {
         <div className="nav">
             <i className='bx bx-briefcase' ></i>
             <ul>
-                <li><button>Edit my CV</button></li>
+                <li><button onClick={showCVForm}>Edit my CV</button></li>
                 <li><button onClick={() => {redirectToGithubTab("https://github.com/maryannintech")}}><i className='bx bxl-github' ></i></button></li>
             </ul>
         </div>

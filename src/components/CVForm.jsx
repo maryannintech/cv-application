@@ -1,8 +1,15 @@
 import "../css/Fonts.css";
 import "../css/CVForm.css";
-import React from 'react';
+import React, { useState } from 'react';
+import CVPreview from "./CVPreview";
 
 export default function CVForm() {
+  const [fullName, setFullName] = useState("");
+
+  function handleFullName() {
+    setFullName();
+  }
+
   return (
     <div className="form">
       <div className="general-info">
@@ -17,6 +24,7 @@ export default function CVForm() {
           id="fullname"
           required
           placeholder="Example: Juan Dela Cruz"
+          onChange={handleFullName}
         ></input>
         <label htmlFor="email">* Email</label>
         <input
