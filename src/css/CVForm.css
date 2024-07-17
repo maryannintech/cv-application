@@ -27,3 +27,19 @@ input {
   border: 1px solid rgb(224, 224, 224);
   padding: 10px;
 }
+
+button {
+  background-color: rgb(63, 63, 63);
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  border: 0 solid transparent;
+  margin-top: 20px;
+  transition: background-color, color, 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(224, 224, 224);
+  color: rgb(63, 63, 63);
+}

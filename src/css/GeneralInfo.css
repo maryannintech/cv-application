@@ -1,0 +1,45 @@
+.form {
+    padding: 10px 30px;
+  }
+  
+  .general-info > p {
+    margin: 0;
+  }
+  
+  .general-title {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .general-desc {
+    color: grey;
+  }
+  
+  label {
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 10px;
+  }
+  
+  button {
+    background-color: rgb(63, 63, 63);
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: 0 solid transparent;
+    margin-top: 20px;
+    transition: background-color, color, 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(224, 224, 224);
+    color: rgb(63, 63, 63);
+  }
