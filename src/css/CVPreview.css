@@ -2,7 +2,6 @@
   padding: 30px 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -11,7 +10,10 @@
   margin: 0;
 }
 
+.general-section > h1 {
+    text-transform: uppercase;
+}
+
 .general-infos {
-  display: flex;
-  justify-content: space-between;
+    font-weight: 300;
 }

@@ -27,15 +27,6 @@ export default function GeneralInfo({
           onChange={handleFullName}
           value={fullName}
         ></input>
-        <label htmlFor="email">* Email</label>
-        <input
-          type="email"
-          id="email"
-          required
-          placeholder="Example: juandelacruz@gmail.com"
-          onChange={handleEmail}
-          value={email}
-        ></input>
         <label htmlFor="phonenumber">* Phone number</label>
         <input
           type="email"
@@ -45,9 +36,17 @@ export default function GeneralInfo({
           onChange={handlePhoneNumber}
           value={phoneNumber}
         ></input>
-        <button>
-          <i className="bx bx-eraser" onClick={clearInfo}></i> Clear general
-          information
+        <label htmlFor="email">* Email</label>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="Example: juandelacruz@gmail.com"
+          onChange={handleEmail}
+          value={email}
+        ></input>
+        <button onClick={clearInfo}>
+          <i className="bx bx-eraser"></i> Clear general information
         </button>
       </div>
     </div>

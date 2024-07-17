@@ -9,15 +9,15 @@ export default function CVForm() {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  function handleFullName() {
+  function handleFullName(e) {
     setFullName(e.target.value);
   }
 
-  function handleEmail() {
+  function handleEmail(e) {
     setEmail(e.target.value);
   }
 
-  function handlePhoneNumber() {
+  function handlePhoneNumber(e) {
     setPhoneNumber(e.target.value);
   }
 
@@ -26,6 +26,7 @@ export default function CVForm() {
     setEmail("");
     setPhoneNumber("");
   }
+  
   return (
     <div>
       <GeneralInfo
