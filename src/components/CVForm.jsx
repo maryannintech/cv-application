@@ -8,6 +8,7 @@ export default function CVForm() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
 
   function handleFullName(e) {
     setFullName(e.target.value);
@@ -21,18 +22,25 @@ export default function CVForm() {
     setPhoneNumber(e.target.value);
   }
 
+  function handleAddress(e) {
+    setAddress(e.target.value);
+  }
+
   function clearInfo() {
     setFullName("");
     setEmail("");
     setPhoneNumber("");
+    setAddress("");
   }
-  
+
   return (
     <div>
       <GeneralInfo
         fullName={fullName}
         email={email}
         phoneNumber={phoneNumber}
+        address={address}
+        handleAddress={handleAddress}
         handleFullName={handleFullName}
         handleEmail={handleEmail}
         handlePhoneNumber={handlePhoneNumber}
@@ -42,6 +50,7 @@ export default function CVForm() {
         fullname={fullName}
         email={email}
         phoneNumber={phoneNumber}
+        address={address}
       ></CVPreview>
     </div>
   );

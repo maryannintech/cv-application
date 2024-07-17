@@ -5,9 +5,11 @@ export default function GeneralInfo({
   fullName,
   email,
   phoneNumber,
+  address,
   handleFullName,
   handleEmail,
   handlePhoneNumber,
+  handleAddress,
   clearInfo,
 }) {
   return (
@@ -44,6 +46,15 @@ export default function GeneralInfo({
           placeholder="Example: juandelacruz@gmail.com"
           onChange={handleEmail}
           value={email}
+        ></input>
+        <label htmlFor="address">* Address</label>
+        <input
+          type="text"
+          id="address"
+          required
+          placeholder="Example: Mandaluyong City, Philippines"
+          onChange={handleAddress}
+          value={address}
         ></input>
         <button onClick={clearInfo}>
           <i className="bx bx-eraser"></i> Clear general information
