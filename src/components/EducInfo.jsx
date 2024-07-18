@@ -40,6 +40,14 @@ export default function EducInfo() {
               required
               placeholder="Example: 10/31/2027"
             ></input>
+            <div className="input-buttons">
+              <button className="clearinfo">
+                <i className="bx bx-eraser"></i> Clear educational experience
+              </button>
+              <button className="addmoreduc">
+                <i className="bx bxs-file-plus"></i> Add more
+              </button>
+            </div>
           </div>
         </div>
       </form>

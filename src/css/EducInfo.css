@@ -13,4 +13,11 @@
 
 .educ-desc {
   color: grey;
+} 
+
+.input-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
 }
