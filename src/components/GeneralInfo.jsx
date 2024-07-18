@@ -14,6 +14,7 @@ export default function GeneralInfo({
 }) {
   return (
     <div className="form">
+      <form>
       <div className="general-info">
         <p className="general-title">General Information</p>
         <p className="general-desc">
@@ -60,6 +61,7 @@ export default function GeneralInfo({
           <i className="bx bx-eraser"></i> Clear general information
         </button>
       </div>
+      </form>
     </div>
   );
 }

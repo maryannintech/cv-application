@@ -1,0 +1,16 @@
+.form {
+  padding: 10px 30px;
+}
+
+.educinfo > p {
+  margin: 0;
+}
+
+.educ-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.educ-desc {
+  color: grey;
+}
