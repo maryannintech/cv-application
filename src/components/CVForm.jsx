@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import CVPreview from "./CVPreview";
 import GeneralInfo from "./GeneralInfo";
 import EducInfo from "./EducInfo";
+import PracticalExperience from "./PracticalExperience";
 
 export default function CVForm() {
   const [fullName, setFullName] = useState("");
@@ -48,6 +49,7 @@ export default function CVForm() {
         clearInfo={clearInfo}
       ></GeneralInfo>
       <EducInfo></EducInfo>
+      <PracticalExperience></PracticalExperience>
       <CVPreview
         fullname={fullName}
         email={email}

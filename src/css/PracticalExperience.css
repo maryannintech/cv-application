@@ -1,0 +1,16 @@
+.form {
+  padding: 10px 30px;
+}
+
+.practical-info > p {
+  margin: 0;
+}
+
+.practical-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.practical-desc {
+  color: grey;
+}
