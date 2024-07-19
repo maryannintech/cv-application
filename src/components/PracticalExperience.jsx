@@ -1,7 +1,19 @@
 import "../css/Fonts.css";
 import "../css/PracticalExperience.css";
 
-export default function PracticalExperience() {
+export default function PracticalExperience({
+  companyname,
+  position,
+  startdate,
+  enddate,
+  aboutjob,
+  handleCompanyName,
+  handlePosition,
+  handleStartDate,
+  handleEndDate,
+  handleAboutJob,
+  handleSaveButtonPract
+}) {
   return (
     <div className="form">
       <form>
@@ -18,6 +30,8 @@ export default function PracticalExperience() {
               type="text"
               id="companyname"
               required
+              value={companyname}
+              onChange={handleCompanyName}
               placeholder="Example: TechNow Inc."
             ></input>
             <label htmlFor="position">* Position title</label>
@@ -25,6 +39,8 @@ export default function PracticalExperience() {
               type="text"
               id="position"
               required
+              value={position}
+              onChange={handlePosition}
               placeholder="Example: Senior Web Developer"
             ></input>
             <label htmlFor="startdate">* Start date</label>
@@ -32,13 +48,16 @@ export default function PracticalExperience() {
               type="date"
               id="startdate"
               required
-              placeholder="Example: 10/31/2023"
+              value={startdate}
+              onChange={handleStartDate}
             ></input>
             <label htmlFor="enddate">* End date</label>
             <input
               type="date"
               id="enddate"
               required
+              value={enddate}
+              onChange={handleEndDate}
               placeholder="Example: 10/31/2027"
             ></input>
             <label htmlFor="aboutjob">Short description of former job</label>
@@ -46,13 +65,20 @@ export default function PracticalExperience() {
               id="aboutjob"
               rows="3"
               cols="10"
+              value={aboutjob}
+              onChange={handleAboutJob}
               placeholder="Example: Designed, developed, and maintained complex websites and applications. Led projects, mentor junior developers, and ensured best practices. "
             ></textarea>
             <div className="input-buttons">
-              <button className="clearinfo">
+              <button
+                className="clearinfo"
+                onClick={() => {
+                  clearInfo("pract");
+                }}
+              >
                 <i className="bx bx-eraser"></i> Clear practical experience
               </button>
-              <button className="savepract">
+              <button className="savepract" onClick={handleSaveButtonPract}>
                 <i className="bx bx-save"></i> Save
               </button>
             </div>

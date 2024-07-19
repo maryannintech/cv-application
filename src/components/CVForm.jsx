@@ -29,24 +29,6 @@ export default function CVForm() {
   function handleAddress(e) {
     setAddress(e.target.value);
   }
-
-  function clearInfo(inputs) {
-    switch (inputs) {
-      case "general":
-        setFullName("");
-        setEmail("");
-        setPhoneNumber("");
-        setAddress("");
-        break;
-      case "educ":
-        setSchoolName("");
-        setDegree("");
-        setSchoolStartDate("");
-        setSchoolEndDate("");
-      case "pract":
-    }
-  }
-
   // educ info states and functions
   const [schoolName, setSchoolName] = useState("");
   const [degree, setDegree] = useState("");
@@ -70,7 +52,7 @@ export default function CVForm() {
     setSchoolEndDate(e.target.value);
   }
 
-  function handleSaveButton(e) {
+  function handleSaveButtonEduc(e) {
     e.preventDefault();
     const newEducation = {
       id: uuidv4(),
@@ -83,6 +65,69 @@ export default function CVForm() {
     clearInfo("educ");
   }
 
+  // practical info states and functions
+  const [companyName, setCompanyName] = useState("");
+  const [position, setPosition] = useState("");
+  const [jobStartDate, setJobStartDate] = useState("");
+  const [jobEndDate, setJobEndDate] = useState("");
+  const [aboutJob, setAboutJob] = useState("");
+  const [practicalList, setPracticalList] = useState([]);
+
+  function handleCompanyName(e) {
+    setCompanyName(e.target.value);
+  }
+
+  function handlePosition(e) {
+    setPosition(e.target.value);
+  }
+
+  function handleJobStartDate(e) {
+    setJobStartDate(e.targer.value);
+  }
+
+  function handleJobEndDate(e) {
+    setJobEndDate(e.target.value);
+  }
+
+  function handleAboutJob(e) {
+    setAboutJob(e.target.value);
+  }
+
+  function handleSaveButtonPract(e) {
+    e.preventDefault();
+    const newPractical = {
+      id: uuidv4(),
+      companyName,
+      position,
+      jobStartDate,
+      jobEndDate,
+      aboutJob,
+    };
+    setPracticalList([...practicalList, newPractical]);
+    clearInfo("pract");
+  }
+
+  function clearInfo(inputs) {
+    switch (inputs) {
+      case "general":
+        setFullName("");
+        setEmail("");
+        setPhoneNumber("");
+        setAddress("");
+        break;
+      case "educ":
+        setSchoolName("");
+        setDegree("");
+        setSchoolStartDate("");
+        setSchoolEndDate("");
+      case "pract":
+        setCompanyName("");
+        setPosition("");
+        setJobStartDate("");
+        setJobEndDate("");
+        setAboutJob("");
+    }
+  }
   return (
     <div>
       <GeneralInfo
@@ -102,13 +147,24 @@ export default function CVForm() {
         startdate={schoolStartDate}
         enddate={schoolEndDate}
         clearInfo={clearInfo}
-        handleSave={handleSaveButton}
+        handleSave={handleSaveButtonEduc}
         handleSchoolName={handleSchoolName}
         handleDegree={handleDegree}
         handleSchoolStartDate={handleSchoolStartDate}
         handleSchoolEndDate={handleSchoolEndDate}
       ></EducInfo>
-      <PracticalExperience></PracticalExperience>
+      <PracticalExperience
+        companyname={companyName}
+        position={position}
+        startdate={jobStartDate}
+        enddate={jobEndDate}
+        aboutjob={aboutJob}
+        handleCompanyName={handleCompanyName}
+        handlePosition={handlePosition}
+        handleJobStartDate={handleJobStartDate}
+        handleJobEndDate={handleJobEndDate}
+        handleSaveButtonPract={handleSaveButtonPract}
+      ></PracticalExperience>
       <CVPreview
         fullname={fullName}
         email={email}
