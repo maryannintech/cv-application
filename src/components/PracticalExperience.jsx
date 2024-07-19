@@ -52,10 +52,13 @@ export default function PracticalExperience() {
               <button className="clearinfo">
                 <i className="bx bx-eraser"></i> Clear practical experience
               </button>
-              <button className="addmoreduc">
-                <i className="bx bxs-file-plus"></i> Add more
+              <button className="savepract">
+                <i class="bx bx-save"></i> Save
               </button>
             </div>
+            <button className="addmorepract">
+            <i class='bx bxs-file-plus'></i> Add more
+            </button>
           </div>
         </div>
       </form>

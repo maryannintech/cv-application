@@ -7,6 +7,7 @@ import EducInfo from "./EducInfo";
 import PracticalExperience from "./PracticalExperience";
 
 export default function CVForm() {
+  // general info states and functions
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -34,6 +35,9 @@ export default function CVForm() {
     setPhoneNumber("");
     setAddress("");
   }
+
+  // educ info states and functions
+  const [schoolName, setSchoolName] = useState("");
 
   return (
     <div>
