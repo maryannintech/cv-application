@@ -53,11 +53,11 @@ export default function PracticalExperience() {
                 <i className="bx bx-eraser"></i> Clear practical experience
               </button>
               <button className="savepract">
-                <i class="bx bx-save"></i> Save
+                <i className="bx bx-save"></i> Save
               </button>
             </div>
             <button className="addmorepract">
-            <i class='bx bxs-file-plus'></i> Add more
+            <i className='bx bxs-file-plus'></i> Add more
             </button>
           </div>
         </div>

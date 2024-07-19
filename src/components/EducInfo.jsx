@@ -49,11 +49,11 @@ export default function EducInfo({schoolname, finished, startdate, enddate}) {
                 <i className="bx bx-eraser"></i> Clear educational experience
               </button>
               <button className="saveduc">
-                <i class="bx bx-save"></i> Save
+                <i className="bx bx-save"></i> Save
               </button>
             </div>
             <button className="addmorepract">
-              <i class="bx bxs-file-plus"></i> Add more
+              <i className="bx bxs-file-plus"></i> Add more
             </button>
           </div>
         </div>
