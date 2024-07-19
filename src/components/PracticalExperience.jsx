@@ -12,7 +12,7 @@ export default function PracticalExperience({
   handleStartDate,
   handleEndDate,
   handleAboutJob,
-  handleSaveButtonPract
+  handleSaveButtonPract,
 }) {
   return (
     <div className="form">
@@ -82,9 +82,6 @@ export default function PracticalExperience({
                 <i className="bx bx-save"></i> Save
               </button>
             </div>
-            <button className="addmorepract">
-              <i className="bx bxs-file-plus"></i> Add more
-            </button>
           </div>
         </div>
       </form>

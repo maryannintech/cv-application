@@ -39,6 +39,7 @@
 .educ-infos,
 .pract-infos {
   padding-left: 20px;
+  padding-bottom: 20px;
   font-weight: 300;
 }
 
@@ -51,4 +52,19 @@
 .pract-infos > ul {
   margin: 5px;
   text-transform: capitalize;
+}
+
+.position,
+.degree {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.companyname,
+.schoolname {
+  background-color: rgb(235, 235, 235);
+  border: 0 solid transparent;
+  border-radius: 10px;
+  width: max-content;
+  padding: 0 6px;
 }

@@ -12,6 +12,8 @@ export default function EducInfo({
   handleDegree,
   handleSchoolStartDate,
   handleSchoolEndDate,
+  achievements,
+  handleAchievements,
 }) {
   return (
     <div className="form">
@@ -48,7 +50,6 @@ export default function EducInfo({
               value={startdate}
               required
               onChange={handleSchoolStartDate}
-              placeholder="Example: 10/31/2023"
             ></input>
             <label htmlFor="enddate">* End date</label>
             <input
@@ -57,8 +58,16 @@ export default function EducInfo({
               value={enddate}
               required
               onChange={handleSchoolEndDate}
-              placeholder="Example: 10/31/2027"
             ></input>
+            <label htmlFor="achievements">Notable achievements</label>
+            <textarea
+              id="achievements"
+              rows="3"
+              cols="10"
+              value={achievements}
+              onChange={handleAchievements}
+              placeholder="Example: Recognized for outstanding academic performance and placed on the Dean’s List for four consecutive semesters, Ranked in the top 5% of the graduating class, etc."
+            ></textarea>
             <div className="input-buttons">
               <button
                 className="clearinfo"
@@ -72,9 +81,6 @@ export default function EducInfo({
                 <i className="bx bx-save"></i> Save
               </button>
             </div>
-            <button className="addmorepract">
-              <i className="bx bxs-file-plus"></i> Add more
-            </button>
           </div>
         </div>
       </form>

@@ -6,7 +6,8 @@ export default function CVPreview({
   email,
   phoneNumber,
   address,
-  educList
+  educList,
+  practList,
 }) {
   return (
     <div className="cv-preview">
@@ -28,22 +29,27 @@ export default function CVPreview({
         <p className="title-section">EDUCATION</p>
         {educList.map((edu) => (
           <div key={edu.id} className="educ-infos">
-            <p>{edu.schoolName} </p>
+            <p className="degree">{edu.degree}</p>
+            <p className="schoolname">{edu.schoolName} </p>
             <p>
               {edu.schoolStartDate} to {edu.schoolEndDate}
             </p>
-            <p>{edu.degree}</p>
+            <p><i className='bx bxs-chevron-right'></i> {edu.achievements}</p>
           </div>
         ))}
       </div>
       <div className="pract-section">
         <p className="title-section">JOB/PRACTICAL EXPERIENCE</p>
-        <div className="pract-infos">
-          <p>Name of Company: </p>
-          <p>Date: </p>
-          <p>Position title: </p>
-          <p>Job description: </p>
-        </div>
+        {practList.map((pract) => (
+          <div key={pract.id} className="pract-infos">
+            <p className="position">{pract.position} </p>
+            <p className="companyname">{pract.companyName} </p>
+            <p>
+              {pract.jobStartDate} to {pract.jobEndDate}{" "}
+            </p>
+            <p><i className='bx bxs-chevron-right'></i> {pract.aboutJob}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -34,6 +34,7 @@ export default function CVForm() {
   const [degree, setDegree] = useState("");
   const [schoolStartDate, setSchoolStartDate] = useState("");
   const [schoolEndDate, setSchoolEndDate] = useState("");
+  const [achievements, setAchievements] = useState("");
   const [educationList, setEducationList] = useState([]);
 
   function handleSchoolName(e) {
@@ -52,6 +53,10 @@ export default function CVForm() {
     setSchoolEndDate(e.target.value);
   }
 
+  function handleAchievements(e) {
+    setAchievements(e.target.value);
+  }
+
   function handleSaveButtonEduc(e) {
     e.preventDefault();
     const newEducation = {
@@ -60,6 +65,7 @@ export default function CVForm() {
       degree,
       schoolStartDate,
       schoolEndDate,
+      achievements,
     };
     setEducationList([...educationList, newEducation]);
     clearInfo("educ");
@@ -82,7 +88,7 @@ export default function CVForm() {
   }
 
   function handleJobStartDate(e) {
-    setJobStartDate(e.targer.value);
+    setJobStartDate(e.target.value);
   }
 
   function handleJobEndDate(e) {
@@ -120,12 +126,15 @@ export default function CVForm() {
         setDegree("");
         setSchoolStartDate("");
         setSchoolEndDate("");
+        setAchievements("");
+        break;
       case "pract":
         setCompanyName("");
         setPosition("");
         setJobStartDate("");
         setJobEndDate("");
         setAboutJob("");
+        break;
     }
   }
   return (
@@ -152,6 +161,8 @@ export default function CVForm() {
         handleDegree={handleDegree}
         handleSchoolStartDate={handleSchoolStartDate}
         handleSchoolEndDate={handleSchoolEndDate}
+        achievements={achievements}
+        handleAchievements={handleAchievements}
       ></EducInfo>
       <PracticalExperience
         companyname={companyName}
@@ -161,8 +172,9 @@ export default function CVForm() {
         aboutjob={aboutJob}
         handleCompanyName={handleCompanyName}
         handlePosition={handlePosition}
-        handleJobStartDate={handleJobStartDate}
-        handleJobEndDate={handleJobEndDate}
+        handleAboutJob={handleAboutJob}
+        handleStartDate={handleJobStartDate}
+        handleEndDate={handleJobEndDate}
         handleSaveButtonPract={handleSaveButtonPract}
       ></PracticalExperience>
       <CVPreview
@@ -171,7 +183,9 @@ export default function CVForm() {
         phoneNumber={phoneNumber}
         address={address}
         educList={educationList}
+        practList={practicalList}
       ></CVPreview>
+      <button></button>
     </div>
   );
 }
