@@ -14,3 +14,10 @@
 .practical-desc {
   color: grey;
 }
+
+textarea {
+  resize: vertical;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}

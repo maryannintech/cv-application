@@ -36,15 +36,18 @@
   font-weight: 600;
 }
 
-.educ-infos {
+.educ-infos,
+.pract-infos {
   padding-left: 20px;
   font-weight: 300;
 }
 
-.educ-infos > p {
+.educ-infos > p,
+.pract-infos > p {
   margin: 0;
 }
 
-.educ-infos > ul {
+.educ-infos >  ul,
+.pract-infos > ul {
   margin: 5px;
 }

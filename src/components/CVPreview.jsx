@@ -26,6 +26,15 @@ export default function CVPreview({ fullname, email, phoneNumber, address }) {
           <p>Degree, certificate, or title: </p>
         </div>
       </div>
+      <div className="pract-section">
+        <p className="title-section">JOB/PRACTICAL EXPERIENCE</p>
+        <div className="pract-infos">
+          <p>Name of Company: </p>
+          <p>Date: </p>
+          <p>Position title: </p>
+          <p>Job description: </p>
+        </div>
+      </div>
     </div>
   );
 }
