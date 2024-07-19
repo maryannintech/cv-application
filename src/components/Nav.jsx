@@ -16,7 +16,6 @@ export default function Nav() {
         <div className="nav">
             <i className='bx bx-briefcase' ></i>
             <ul>
-                <li><button onClick={showCVForm}>Edit my CV</button></li>
                 <li><button onClick={() => {redirectToGithubTab("https://github.com/maryannintech")}}><i className='bx bxl-github' ></i></button></li>
             </ul>
         </div>

@@ -2,6 +2,11 @@
   padding: 10px 30px;
 }
 
+.cvForm {
+  padding: 20px;
+  width: fit-content;
+}
+
 .general-info > p {
   margin: 0;
 }
@@ -30,7 +35,6 @@ input {
 
 button {
   background-color: rgb(63, 63, 63);
-  width: 100%;
   padding: 10px;
   color: white;
   border-radius: 10px;
@@ -42,4 +46,19 @@ button {
 button:hover {
   background-color: rgb(224, 224, 224);
   color: rgb(63, 63, 63);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.done {
+  width: 50%;
+}
+
+.done:hover {
+  background-color: rgb(32, 160, 32);
+  color: rgb(224, 224, 224);
 }

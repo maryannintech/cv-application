@@ -138,7 +138,7 @@ export default function CVForm() {
     }
   }
   return (
-    <div>
+    <div className="cvForm">
       <GeneralInfo
         fullName={fullName}
         email={email}
@@ -177,15 +177,19 @@ export default function CVForm() {
         handleEndDate={handleJobEndDate}
         handleSaveButtonPract={handleSaveButtonPract}
       ></PracticalExperience>
-      <CVPreview
+      {/**<CVPreview
         fullname={fullName}
         email={email}
         phoneNumber={phoneNumber}
         address={address}
         educList={educationList}
         practList={practicalList}
-      ></CVPreview>
-      <button></button>
+      ></CVPreview> */}
+      <div className="button">
+        <button className="done">
+          <i className="bx bx-check"></i> Done
+        </button>
+      </div>
     </div>
   );
 }
