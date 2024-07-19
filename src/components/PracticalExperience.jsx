@@ -46,7 +46,7 @@ export default function PracticalExperience() {
               id="aboutjob"
               rows="3"
               cols="10"
-              placeholder="Designed, developed, and maintained complex websites and applications. Led projects, mentor junior developers, and ensured best practices. "
+              placeholder="Example: Designed, developed, and maintained complex websites and applications. Led projects, mentor junior developers, and ensured best practices. "
             ></textarea>
             <div className="input-buttons">
               <button className="clearinfo">
@@ -57,7 +57,7 @@ export default function PracticalExperience() {
               </button>
             </div>
             <button className="addmorepract">
-            <i className='bx bxs-file-plus'></i> Add more
+              <i className="bx bxs-file-plus"></i> Add more
             </button>
           </div>
         </div>

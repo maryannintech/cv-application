@@ -50,4 +50,5 @@
 .educ-infos >  ul,
 .pract-infos > ul {
   margin: 5px;
+  text-transform: capitalize;
 }

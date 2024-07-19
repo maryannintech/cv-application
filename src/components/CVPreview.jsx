@@ -1,7 +1,13 @@
 import "../css/Fonts.css";
 import "../css/CVPreview.css";
 
-export default function CVPreview({ fullname, email, phoneNumber, address }) {
+export default function CVPreview({
+  fullname,
+  email,
+  phoneNumber,
+  address,
+  educList
+}) {
   return (
     <div className="cv-preview">
       <div className="general-section">
@@ -20,11 +26,15 @@ export default function CVPreview({ fullname, email, phoneNumber, address }) {
       </div>
       <div className="educ-section">
         <p className="title-section">EDUCATION</p>
-        <div className="educ-infos">
-          <p>Name of School: </p>
-          <p>Date: </p>
-          <p>Degree, certificate, or title: </p>
-        </div>
+        {educList.map((edu) => (
+          <div key={edu.id} className="educ-infos">
+            <p>{edu.schoolName} </p>
+            <p>
+              {edu.schoolStartDate} to {edu.schoolEndDate}
+            </p>
+            <p>{edu.degree}</p>
+          </div>
+        ))}
       </div>
       <div className="pract-section">
         <p className="title-section">JOB/PRACTICAL EXPERIENCE</p>

@@ -1,7 +1,18 @@
 import "../css/Fonts.css";
 import "../css/EducInfo.css";
 
-export default function EducInfo({schoolname, finished, startdate, enddate}) {
+export default function EducInfo({
+  schoolname,
+  finished,
+  startdate,
+  enddate,
+  clearInfo,
+  handleSave,
+  handleSchoolName,
+  handleDegree,
+  handleSchoolStartDate,
+  handleSchoolEndDate,
+}) {
   return (
     <div className="form">
       <form>
@@ -18,6 +29,7 @@ export default function EducInfo({schoolname, finished, startdate, enddate}) {
               id="schoolname"
               required
               value={schoolname}
+              onChange={handleSchoolName}
               placeholder="Example: University of Creative Arts"
             ></input>
             <label htmlFor="degree">* Degree, certificate, or title</label>
@@ -26,6 +38,7 @@ export default function EducInfo({schoolname, finished, startdate, enddate}) {
               id="degree"
               value={finished}
               required
+              onChange={handleDegree}
               placeholder="Example: Bachelor of Science in Information Technology"
             ></input>
             <label htmlFor="startdate">* Start date</label>
@@ -34,6 +47,7 @@ export default function EducInfo({schoolname, finished, startdate, enddate}) {
               id="startdate"
               value={startdate}
               required
+              onChange={handleSchoolStartDate}
               placeholder="Example: 10/31/2023"
             ></input>
             <label htmlFor="enddate">* End date</label>
@@ -42,13 +56,19 @@ export default function EducInfo({schoolname, finished, startdate, enddate}) {
               id="enddate"
               value={enddate}
               required
+              onChange={handleSchoolEndDate}
               placeholder="Example: 10/31/2027"
             ></input>
             <div className="input-buttons">
-              <button className="clearinfo">
+              <button
+                className="clearinfo"
+                onClick={() => {
+                  clearInfo("educ");
+                }}
+              >
                 <i className="bx bx-eraser"></i> Clear educational experience
               </button>
-              <button className="saveduc">
+              <button className="saveduc" onClick={handleSave}>
                 <i className="bx bx-save"></i> Save
               </button>
             </div>

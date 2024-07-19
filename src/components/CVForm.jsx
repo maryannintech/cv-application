@@ -1,6 +1,7 @@
 import "../css/Fonts.css";
 import "../css/CVForm.css";
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import CVPreview from "./CVPreview";
 import GeneralInfo from "./GeneralInfo";
 import EducInfo from "./EducInfo";
@@ -29,15 +30,58 @@ export default function CVForm() {
     setAddress(e.target.value);
   }
 
-  function clearInfo() {
-    setFullName("");
-    setEmail("");
-    setPhoneNumber("");
-    setAddress("");
+  function clearInfo(inputs) {
+    switch (inputs) {
+      case "general":
+        setFullName("");
+        setEmail("");
+        setPhoneNumber("");
+        setAddress("");
+        break;
+      case "educ":
+        setSchoolName("");
+        setDegree("");
+        setSchoolStartDate("");
+        setSchoolEndDate("");
+      case "pract":
+    }
   }
 
   // educ info states and functions
   const [schoolName, setSchoolName] = useState("");
+  const [degree, setDegree] = useState("");
+  const [schoolStartDate, setSchoolStartDate] = useState("");
+  const [schoolEndDate, setSchoolEndDate] = useState("");
+  const [educationList, setEducationList] = useState([]);
+
+  function handleSchoolName(e) {
+    setSchoolName(e.target.value);
+  }
+
+  function handleDegree(e) {
+    setDegree(e.target.value);
+  }
+
+  function handleSchoolStartDate(e) {
+    setSchoolStartDate(e.target.value);
+  }
+
+  function handleSchoolEndDate(e) {
+    setSchoolEndDate(e.target.value);
+  }
+
+  function handleSaveButton(e) {
+    e.preventDefault();
+    const newEducation = {
+      id: uuidv4(),
+      schoolName,
+      degree,
+      schoolStartDate,
+      schoolEndDate,
+    };
+    setEducationList([...educationList, newEducation]);
+    clearInfo("educ");
+  }
 
   return (
     <div>
@@ -52,13 +96,25 @@ export default function CVForm() {
         handlePhoneNumber={handlePhoneNumber}
         clearInfo={clearInfo}
       ></GeneralInfo>
-      <EducInfo></EducInfo>
+      <EducInfo
+        schoolname={schoolName}
+        finished={degree}
+        startdate={schoolStartDate}
+        enddate={schoolEndDate}
+        clearInfo={clearInfo}
+        handleSave={handleSaveButton}
+        handleSchoolName={handleSchoolName}
+        handleDegree={handleDegree}
+        handleSchoolStartDate={handleSchoolStartDate}
+        handleSchoolEndDate={handleSchoolEndDate}
+      ></EducInfo>
       <PracticalExperience></PracticalExperience>
       <CVPreview
         fullname={fullName}
         email={email}
         phoneNumber={phoneNumber}
         address={address}
+        educList={educationList}
       ></CVPreview>
     </div>
   );
