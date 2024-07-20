@@ -137,59 +137,81 @@ export default function CVForm() {
         break;
     }
   }
+
+  // save button function
+  const [showCV, setShowCV] = useState(false);
+
+  function handleDoneButoon() {
+    setShowCV(true);
+  }
+
+  function handleBackButoon() {
+    setShowCV(false);
+  }
+
+  let cvPreview = (
+    <CVPreview
+      fullname={fullName}
+      email={email}
+      phoneNumber={phoneNumber}
+      address={address}
+      educList={educationList}
+      practList={practicalList}
+      handleBackButoon={handleBackButoon}
+    ></CVPreview>
+  );
+
   return (
-    <div className="cvForm">
-      <GeneralInfo
-        fullName={fullName}
-        email={email}
-        phoneNumber={phoneNumber}
-        address={address}
-        handleAddress={handleAddress}
-        handleFullName={handleFullName}
-        handleEmail={handleEmail}
-        handlePhoneNumber={handlePhoneNumber}
-        clearInfo={clearInfo}
-      ></GeneralInfo>
-      <EducInfo
-        schoolname={schoolName}
-        finished={degree}
-        startdate={schoolStartDate}
-        enddate={schoolEndDate}
-        clearInfo={clearInfo}
-        handleSave={handleSaveButtonEduc}
-        handleSchoolName={handleSchoolName}
-        handleDegree={handleDegree}
-        handleSchoolStartDate={handleSchoolStartDate}
-        handleSchoolEndDate={handleSchoolEndDate}
-        achievements={achievements}
-        handleAchievements={handleAchievements}
-      ></EducInfo>
-      <PracticalExperience
-        companyname={companyName}
-        position={position}
-        startdate={jobStartDate}
-        enddate={jobEndDate}
-        aboutjob={aboutJob}
-        handleCompanyName={handleCompanyName}
-        handlePosition={handlePosition}
-        handleAboutJob={handleAboutJob}
-        handleStartDate={handleJobStartDate}
-        handleEndDate={handleJobEndDate}
-        handleSaveButtonPract={handleSaveButtonPract}
-      ></PracticalExperience>
-      {/**<CVPreview
-        fullname={fullName}
-        email={email}
-        phoneNumber={phoneNumber}
-        address={address}
-        educList={educationList}
-        practList={practicalList}
-      ></CVPreview> */}
-      <div className="button">
-        <button className="done">
-          <i className="bx bx-check"></i> Done
-        </button>
-      </div>
-    </div>
+    <>
+      {!showCV ? (
+        <div className="cvForm">
+          <GeneralInfo
+            fullName={fullName}
+            email={email}
+            phoneNumber={phoneNumber}
+            address={address}
+            handleAddress={handleAddress}
+            handleFullName={handleFullName}
+            handleEmail={handleEmail}
+            handlePhoneNumber={handlePhoneNumber}
+            clearInfo={clearInfo}
+          ></GeneralInfo>
+          <EducInfo
+            schoolname={schoolName}
+            finished={degree}
+            startdate={schoolStartDate}
+            enddate={schoolEndDate}
+            clearInfo={clearInfo}
+            handleSave={handleSaveButtonEduc}
+            handleSchoolName={handleSchoolName}
+            handleDegree={handleDegree}
+            handleSchoolStartDate={handleSchoolStartDate}
+            handleSchoolEndDate={handleSchoolEndDate}
+            achievements={achievements}
+            handleAchievements={handleAchievements}
+          ></EducInfo>
+          <PracticalExperience
+            companyname={companyName}
+            position={position}
+            startdate={jobStartDate}
+            enddate={jobEndDate}
+            aboutjob={aboutJob}
+            handleCompanyName={handleCompanyName}
+            handlePosition={handlePosition}
+            handleAboutJob={handleAboutJob}
+            handleStartDate={handleJobStartDate}
+            handleEndDate={handleJobEndDate}
+            handleSaveButtonPract={handleSaveButtonPract}
+          ></PracticalExperience>
+          <div className="button">
+            <button className="done" onClick={handleDoneButoon}>
+              <i className="bx bx-check"></i> Done
+            </button>
+          </div>
+        </div>
+      ) : (
+        cvPreview
+      )}
+    </>
   );
 }

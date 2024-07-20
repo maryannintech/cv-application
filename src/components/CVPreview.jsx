@@ -8,9 +8,13 @@ export default function CVPreview({
   address,
   educList,
   practList,
+  handleBackButoon,
 }) {
   return (
     <div className="cv-preview">
+      <button className="back-button" onClick={handleBackButoon}>
+        <i className="bx bx-arrow-back"></i> Edit CV
+      </button>
       <div className="general-section">
         <h1>{fullname}</h1>
         <div className="general-infos">
@@ -34,7 +38,9 @@ export default function CVPreview({
             <p>
               {edu.schoolStartDate} to {edu.schoolEndDate}
             </p>
-            <p><i className='bx bxs-chevron-right'></i> {edu.achievements}</p>
+            <p>
+              <i className="bx bxs-chevron-right"></i> {edu.achievements}
+            </p>
           </div>
         ))}
       </div>
@@ -47,7 +53,9 @@ export default function CVPreview({
             <p>
               {pract.jobStartDate} to {pract.jobEndDate}{" "}
             </p>
-            <p><i className='bx bxs-chevron-right'></i> {pract.aboutJob}</p>
+            <p>
+              <i className="bx bxs-chevron-right"></i> {pract.aboutJob}
+            </p>
           </div>
         ))}
       </div>
