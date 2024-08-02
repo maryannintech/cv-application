@@ -1,9 +1,18 @@
 @media only screen and (max-width: 600px) {
     .input-buttons {
-        flex-direction: column;
+        flex-wrap: wrap;
         padding-top: 20px;
+    }
+    .general-infos {
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 5px;
     }
     button {
         margin: 0;
+    }
+    .cv-preview {
+        width: 80%;
+        margin-left: 5%;
     }
 }
