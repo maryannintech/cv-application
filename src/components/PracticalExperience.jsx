@@ -1,5 +1,6 @@
 import "../css/Fonts.css";
 import "../css/PracticalExperience.css";
+import "../css/QueryCSS.css";
 
 export default function PracticalExperience({
   companyname,

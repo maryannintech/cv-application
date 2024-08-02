@@ -1,5 +1,6 @@
 import "../css/Fonts.css";
 import "../css/EducInfo.css";
+import "../css/QueryCSS.css";
 
 export default function EducInfo({
   schoolname,

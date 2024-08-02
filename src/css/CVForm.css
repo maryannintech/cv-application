@@ -4,7 +4,10 @@
 
 .cvForm {
   padding: 20px;
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   animation: fadeIn 0.9s ease-in-out;
 }
 
@@ -42,6 +45,7 @@ button {
   border: 0 solid transparent;
   margin-top: 20px;
   transition: background-color, color, 0.3s ease;
+
 }
 
 button:hover {
@@ -53,6 +57,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
 }
 
 .done {

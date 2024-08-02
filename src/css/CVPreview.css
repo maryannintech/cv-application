@@ -1,9 +1,7 @@
 .cv-preview {
   padding: 30px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   animation: fadeIn 0.9s ease-in-out;
+  width: 80%;
 }
 
 .general-section {

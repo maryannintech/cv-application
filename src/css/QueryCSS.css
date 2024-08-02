@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px) {
+    .input-buttons {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    button {
+        margin: 0;
+    }
+}
