@@ -21,6 +21,8 @@ export default function PracticalExperience({
         <div className="practical-info">
           <p className="practical-title">Practical Experience</p>
           <p className="practical-desc">
+            Fields marked with an asterisk (*) are required to be answered.{" "}
+            <br></br>
             Practical experience showcases your hands-on skills and abilities
             gained through work, internships, volunteer roles, or other relevant
             activities.

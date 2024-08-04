@@ -18,6 +18,8 @@ export default function GeneralInfo({
         <div className="general-info">
           <p className="general-title">General Information</p>
           <p className="general-desc">
+            Fields marked with an asterisk (*) are required to be answered.{" "}
+            <br></br>
             General information on a CV serves as a foundation for potential
             employers to contact you.
           </p>

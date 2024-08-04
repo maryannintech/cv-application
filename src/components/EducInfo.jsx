@@ -22,6 +22,8 @@ export default function EducInfo({
         <div className="educinfo">
           <p className="educ-title">Educational Experience</p>
           <p className="educ-desc">
+            Fields marked with an asterisk (*) are required to be answered.{" "}
+            <br></br>
             Educational Experience highlights your academic qualifications and
             demonstrates your knowledge base.
           </p>
